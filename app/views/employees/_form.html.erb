@@ -1,0 +1,46 @@
+<%= form_with(model: employee) do |form| %>
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name, required: true %>
+    <% if employee.errors[:first_name].present? %>
+      <li style="color: red"><%= employee.errors.full_messages_for(:first_name).first %></li>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name, required: true %>
+    <% if employee.errors[:last_name].present? %>
+      <li style="color: red"><%= employee.errors.full_messages_for(:last_name).first %></li>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :nickname, style: "display: block" %>
+    <%= form.text_field :nickname %>
+    <% if employee.errors[:nickname].present? %>
+      <li style="color: red"><%= employee.errors.full_messages_for(:nickname).first %></li>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email, required: true %>
+    <% if employee.errors[:email].present? %>
+      <li style="color: red"><%= employee.errors.full_messages_for(:email).first %></li>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone, required: true %>
+    <% if employee.errors[:phone].present? %>
+      <li style="color: red"><%= employee.errors.full_messages_for(:phone).first %></li>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit "Save", class: "rounded-lg py-3 px-5 bg-blue-600 text-white"%>
+  </div>
+
+<% end %>
