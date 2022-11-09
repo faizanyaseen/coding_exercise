@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Ruby version 3.0.0
+Rails version 7
 
-* Ruby version
 
-* System dependencies
+Please follow these steps after cloning the project:
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+* Go to project directory
 
-* How to run the test suite
+* run "npm install --global yarn"
 
-* Services (job queues, cache servers, search engines, etc.)
+* run "yarn"
 
-* Deployment instructions
+* run "rails assets:precompile"
 
-* ...
+* run "rails db:create"
+
+* run "rails db:migrate"
+
+* rub "bin/dev"
+
